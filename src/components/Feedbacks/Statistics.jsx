@@ -1,8 +1,11 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import css from './Feedbacks.module.css';
 
-function Statistics({ good, neutral, bad, total, positivePercentage }) {
+function Statistics(props) {
+
+
+    const { good, neutral, bad, total, positivePercentage} = props;
     return (
             <ul className={css.feedbackValues}>
                 <li>
@@ -25,5 +28,11 @@ function Statistics({ good, neutral, bad, total, positivePercentage }) {
             </ul>
     );
 }
-
+Statistics.propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    positivePercentage: PropTypes.string.isRequired,
+  }
 export default Statistics;
