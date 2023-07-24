@@ -71,6 +71,9 @@ class Feedbacks extends Component {
         </div>
     );
   }
+};
+Feedbacks.propTypes = {
+  feedbackTotal: PropTypes.func.isRequired,
 }
 
 export default Feedbacks;
